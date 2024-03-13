@@ -1,0 +1,514 @@
+/* base code */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	/*defines what 1rem is*/
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	background-image: linear-gradient(
+			rgba(255, 255, 255, 0.5),
+			rgba(255, 255, 255, 0.5)
+		),
+		url(/assets/img/background.jpg);
+	background-position: center;
+}
+
+.row > * {
+	padding: 0;
+}
+
+/*homepage overlay*/
+.overlay {
+	background-color: red;
+	/* Centered text over image */
+}
+.overlay-IMG {
+	height: 100vh;
+}
+.overlay-centered {
+	width: 15%;
+	height: 5%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*************homepage main website**************/
+.mainScreen {
+	display: none;
+}
+
+.navbar {
+	opacity: 0.7;
+	position: relative;
+}
+
+.mainContent-backgroundIMG {
+	background-image: url(/assets/img/vinyard.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+.navbar {
+	height: 15vh;
+}
+.navbar-link-img {
+	height: 10rem;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	color: white;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	padding: 1rem;
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(241, 244, 249, 0.85),
+		rgba(241, 244, 249, 0.85)
+	);
+	font-size: 4vw;
+}
+
+.stripText {
+	text-align: center;
+	border: 10px solid lightgreen;
+}
+
+/************footer***************/
+.footer {
+	border: 5px solid lightgreen;
+}
+.footer-right-openingTimes {
+	text-align: left;
+	list-style: none;
+}
+
+.fa-ul > li {
+	text-align: left;
+}
+
+/* shop and wine tour*/
+.shopLink,
+.tourLink {
+	position: relative;
+}
+
+.shopLink {
+	background: url(/assets/img/barrels.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.tourLink {
+	background: url(/assets/img/wineTasting.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.spaceImg {
+	background: url(/assets/img/spacer.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* shop nd wine tour text */
+.tourLink-title,
+.shopLink-title {
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	color: white;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	padding: 1rem;
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(241, 244, 249, 0.85),
+		rgba(241, 244, 249, 0.85)
+	);
+	font-size: 2vw;
+}
+
+/*timeline style - home page*/
+a {
+	color: #ffffcc;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+a:hover,
+a.selected {
+	color: #ffcc00;
+}
+
+#timeline {
+	width: 60%;
+	height: 90vh;
+	overflow: hidden;
+	margin: 40px auto;
+	position: relative;
+	background: url("http://www.csslab.cl/ejemplos/timelinr/latest/images/dot.gif")
+		3px top repeat-y;
+}
+
+#dates {
+	width: 20%;
+	height: 600px;
+	overflow: hidden;
+	float: left;
+}
+
+#dates li {
+	list-style: none;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 24px;
+	padding-left: 10px;
+	background: url("http://www.csslab.cl/ejemplos/timelinr/latest/images/biggerdot.png")
+		left center no-repeat;
+}
+
+#dates a {
+	line-height: 38px;
+	padding-bottom: 10px;
+}
+
+#dates .selected {
+	font-size: 38px;
+}
+
+#issues {
+	width: 100%;
+	height: 90vh;
+}
+
+#issues li {
+	margin-left: 5rem;
+	height: 90vh;
+	overflow: auto;
+	background-color: red;
+	list-style: none;
+	text-align: center;
+}
+
+#issues li.selected img {
+	transform: scale(1.1, 1.1);
+}
+
+#issues li img {
+	width: 200px;
+	margin: 10px 30px 10px 50px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); /* IE 6 & 7 */
+	zoom: 1;
+	transition: all 2s ease-in-out;
+	transform: scale(0.7, 0.7);
+}
+
+#issues li h1 {
+	color: #ffcc00;
+	font-size: 48px;
+	text-align: center;
+	text-shadow: #000 1px 1px 2px;
+}
+
+#issues li p {
+	font-size: 14px;
+	margin: 10px 20px;
+	font-weight: normal;
+	line-height: 22px;
+	text-shadow: #000 1px 1px 2px;
+}
+
+#grad_top,
+#grad_bottom {
+	width: 100%;
+	height: 80px;
+	position: absolute;
+}
+
+#grad_top {
+	top: 0;
+	background: url("http://www.csslab.cl/ejemplos/timelinr/latest/images/grad_top.png")
+		repeat-x;
+}
+
+#grad_bottom {
+	bottom: 0;
+	background: url("http://www.csslab.cl/ejemplos/timelinr/latest/images/grad_bottom.png")
+		repeat-x;
+}
+
+#next,
+#prev {
+	position: absolute;
+	left: 45%;
+	font-size: 70px;
+	width: 38px;
+	height: 22px;
+	background-position: 0 -44px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+#next:hover,
+#prev:hover {
+	background-position: 0 0;
+}
+
+#next {
+	bottom: 0;
+	background-image: url("http://www.csslab.cl/ejemplos/timelinr/latest/images/next_v.png");
+}
+
+#prev {
+	top: 0;
+	background-image: url("http://www.csslab.cl/ejemplos/timelinr/latest/images/prev_v.png");
+}
+
+#next.disabled,
+#prev.disabled {
+	opacity: 0.2;
+}
+
+/*********************about page******************/
+.aboutPageTitle {
+	text-align: center;
+	font-size: 10rem;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.testimonial {
+	height: 50rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.header h3 {
+	color: wheat;
+}
+
+.content {
+	width: 30%;
+	font-size: 2rem;
+	color: white;
+}
+
+/*scroll effect - about page*/
+.main-container {
+	max-width: 1000px;
+	margin: 25px auto 25px auto;
+	position: relative;
+}
+
+.container {
+	position: relative;
+	padding: 25px;
+}
+
+/*about page scroll animation*/
+.animation-element {
+	opacity: 0;
+	position: relative;
+}
+
+/*imamge mixin for about page*/
+.animation-element:nth-child(1) {
+	background: url(/assets/img/family1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.animation-element:nth-child(2) {
+	margin-left: 30% !important;
+	background: url(/assets/img/family2.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.animation-element:nth-child(3) {
+	background: url(/assets/img/family3.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.animation-element:nth-child(4) {
+	margin-left: 30% !important;
+	background: url(/assets/img/family4.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.animation-element:nth-child(5) {
+	background: url(/assets/img/modernFamily.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+/*animation element sliding left*/
+.animation-element.slide-left {
+	opacity: 0;
+	transition: all 500ms linear;
+	transform: translate3d(-100px, 0px, 0px);
+}
+
+.animation-element.slide-left.in-view {
+	opacity: 1;
+	transform: translate3d(0px, 0px, 0px);
+}
+
+/*animation slide left styled for testimonials*/
+.animation-element.slide-left.testimonial {
+	float: left;
+	width: 70%;
+	margin: 0% 1.5% 3% 1.5%;
+	padding: 15px;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+	border: solid 1px #eaeaea;
+}
+
+.animation-element.slide-left.testimonial img {
+	width: 50%;
+	height: 50%;
+	box-shadow: 0px 1px 3px rgba(51, 51, 51, 0.5);
+}
+
+/*media queries for small devices about page slide*/
+@media screen and (max-width: 678px) {
+	/*testimonials*/
+	.animation-element.slide-left.testimonial,
+	.animation-element.slide-left.testimonial:nth-of-type(odd),
+	.animation-element.slide-left.testimonial:nth-of-type(even) {
+		width: 100%;
+		margin: 0px 0px 20px 0px;
+	}
+	.animation-element.slide-left.testimonial .right,
+	.animation-element.slide-left.testimonial .left,
+	.animation-element.slide-left.testimonial .content,
+	.animation-element.slide-left.testimonial .rating {
+		text-align: center;
+		float: none;
+	}
+	.animation-element.slide-left.testimonial img {
+		width: 85px;
+		height: 85px;
+		margin-bottom: 5px;
+	}
+}
+/***********************shop page*******************/
+.cartItem {
+	display: flex;
+	flex-direction: row;
+	width: 320px;
+}
+.cartItem-left {
+	width: 50%;
+}
+.cartItem-right {
+	width: 50%;
+	padding-left: 5rem;
+}
+.cartItem-right-select,
+.cartItem-right-button {
+	width: 90%;
+}
+
+.qty .count {
+	color: #000;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 30px;
+	padding: 0 2px;
+	min-width: 35px;
+	text-align: center;
+}
+
+.qty .plus {
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	color: white;
+	width: 30px;
+	height: 30px;
+	font: 30px/1 Arial, sans-serif;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.qty .minus {
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	color: white;
+	width: 30px;
+	height: 30px;
+	font: 30px/1 Arial, sans-serif;
+	text-align: center;
+	border-radius: 50%;
+	background-clip: padding-box;
+}
+
+div {
+	text-align: center;
+}
+
+.minus:hover {
+	background-color: #717fe0 !important;
+}
+
+.plus:hover {
+	background-color: #717fe0 !important;
+}
+
+/*Prevent text selection*/
+span {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input {
+	border: 0;
+	width: 2%;
+	background-color: white;
+}
+
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+} /*# sourceMappingURL=style.css.map */
