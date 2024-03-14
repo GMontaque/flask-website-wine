@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>Nonnino Vino</title>
-		<link rel="icon" href="/assets/img/iconGrape.png" />
+		<link rel="icon" href="{{url_for('static', filename='iconGrape.png')}}" />
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
 		<meta
@@ -30,7 +30,7 @@
 		<div class="container-fluid overlay">
 			<div class="row">
 				<img
-					src="/assets/img/coverIMG.jpg"
+					src="{{url_for('static', filename='img/coverIMG.jpg')}}"
 					class="overlay-IMG"
 					alt=""
 					srcset=""
@@ -48,7 +48,7 @@
 					<div class="container-fluid">
 						<a class="navbar-brand navbar-link" href="{{url_for('index')}}"
 							><img
-								src="/assets/img/iconGrape.png"
+								src="{{url_for('static', filename='iconGrape.png')}}"
 								class="img-fluid rounded-top navbar-link-img"
 								alt=""
 						/></a>
